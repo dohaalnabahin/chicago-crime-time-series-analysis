@@ -62,7 +62,7 @@ The data was provided as yearly CSV files and combined into one dataset for anal
 
 The workflow below summarizes the steps used in this project.
 
-📍 **Image location:** `images/workflow.png`
+📍 **Image location:** `Project_Workflow.png`
 
 ![Project Workflow](Project_Workflow.png)
 
@@ -117,9 +117,9 @@ In **2022**, **District 8** had the highest number of reported crimes with **14,
 
 **District 31** had the lowest number of reported crimes with only **15 crimes**.
 
-📍 **Image location:** `images/police_districts_2022.png`
+📍 **Image location:** `Comparing_Polic_Districts.png`
 
-![Police District Crimes](images/police_districts_2022.png)
+![Police District Crimes](Comparing_Polic_Districts.png)
 
 ## 💡 Insight
 
@@ -141,9 +141,9 @@ Total reported crimes in Chicago decreased from **485,886 crimes in 2001** to **
 
 This represents a decrease of **247,028 crimes**, or about **50.84%**.
 
-📍 **Image location:** `images/crimes_across_years.png`
+📍 **Image location:** `Crimes_Across_the_Years.png`
 
-![Crimes Across Years](images/crimes_across_years.png)
+![Crimes Across Years](Crimes_Across_the_Years.png)
 
 Although overall crime decreased, some crime types increased over the same period.
 
@@ -155,9 +155,9 @@ The largest increases included:
 * 🚨 Stalking
 * 🚨 Homicide
 
-📍 **Image location:** `images/opposite_crime_trends.png`
+📍 **Image location:** `Opposite_Crime_Trends.png`
 
-![Opposite Crime Trends](images/opposite_crime_trends.png)
+![Opposite Crime Trends](Opposite_Crime_Trends.png)
 
 ## 💡 Insight
 
@@ -186,9 +186,9 @@ Crimes were more common during **PM Rush Hour**.
 | 🌅 AM Rush Hour  |         770,651 |
 | 🌆 PM Rush Hour  |       1,206,353 |
 
-📍 **Image location:** `images/rush_hour_comparison.png`
+📍 **Image location:** `AM_vs_PM_Rush_Hour.png`
 
-![Rush Hour Comparison](images/rush_hour_comparison.png)
+![Rush Hour Comparison](AM_vs_PM_Rush_Hour.png)
 
 The top 5 crimes during **AM Rush Hour** were:
 
@@ -206,9 +206,9 @@ The top 5 crimes during **PM Rush Hour** were:
 4. Narcotics
 5. Assault
 
-📍 **Image location:** `images/top_rush_hour_crimes.png`
+📍 **Image location:** `AM_vs_PM_Rush_Hour.png`
 
-![Top Rush Hour Crimes](images/top_rush_hour_crimes.png)
+![Top Rush Hour Crimes](AM_vs_PM_Rush_Hour.png)
 
 Motor Vehicle Theft was also more common during **PM Rush Hour**:
 
@@ -217,9 +217,9 @@ Motor Vehicle Theft was also more common during **PM Rush Hour**:
 | 🌅 AM Rush Hour |                    41,578 |
 | 🌆 PM Rush Hour |                    53,716 |
 
-📍 **Image location:** `images/motor_vehicle_theft_rush_hour.png`
+📍 **Image location:** `Motor_Vehicle_Theft.png`
 
-![Motor Vehicle Theft Rush Hour](images/motor_vehicle_theft_rush_hour.png)
+![Motor Vehicle Theft Rush Hour](Motor_Vehicle_Theft.png)
 
 ## 💡 Insight
 
@@ -245,9 +245,9 @@ The top 3 holidays with the highest number of reported crimes were:
 | 🇺🇸 Independence Day |          22,672 |
 | 👷 Labor Day          |          22,164 |
 
-📍 **Image location:** `images/holiday_crimes.png`
+📍 **Image location:** `Comparing_Holidays.png`
 
-![Holiday Crimes](images/holiday_crimes.png)
+![Holiday Crimes](Comparing_Holidays.png)
 
 For **New Year's Day**, the top crimes were:
 
@@ -273,9 +273,9 @@ For **Labor Day**, the top crimes were:
 * Narcotics
 * Assault
 
-📍 **Image location:** `images/top_holiday_crimes.png`
+📍 **Image location:** `The_top_5_crimes.png`
 
-![Top Holiday Crimes](images/top_holiday_crimes.png)
+![Top Holiday Crimes](The_top_5_crimes.png)
 
 ## 💡 Insight
 

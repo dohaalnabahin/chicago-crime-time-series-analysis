@@ -316,15 +316,15 @@ chicago-crime-time-series-analysis/
 ├── Project3_Part1_Chicago_Crime.ipynb
 │
 ├── images/
-│   ├── workflow.png
-│   ├── police_districts_2022.png
-│   ├── crimes_across_years.png
-│   ├── opposite_crime_trends.png
-│   ├── rush_hour_comparison.png
-│   ├── top_rush_hour_crimes.png
-│   ├── motor_vehicle_theft_rush_hour.png
-│   ├── holiday_crimes.png
-│   └── top_holiday_crimes.png
+│   ├── Project_Workflow.png
+│   ├── Comparing_Polic_Districts.png
+│   ├── Crimes_Across_the_Years.png
+│   ├── Opposite_Crime_Trends.png
+│   ├── AM_vs_PM_Rush_Hour.png
+│   ├── The_top_5_crimes.png
+│   ├── Motor_Vehicle_Theft.png
+│   ├── Comparing_Holidays.png
+│   └── Top_Holiday_Crimes.png
 │
 └── data/
     └── README.md

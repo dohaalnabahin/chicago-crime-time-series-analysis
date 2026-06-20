@@ -206,9 +206,9 @@ The top 5 crimes during **PM Rush Hour** were:
 4. Narcotics
 5. Assault
 
-📍 **Image location:** `AM_vs_PM_Rush_Hour.png`
+📍 **Image location:** `The_top_5_crimes.png`
 
-![Top Rush Hour Crimes](AM_vs_PM_Rush_Hour.png)
+![Top Rush Hour Crimes](The_top_5_crimes.png)
 
 Motor Vehicle Theft was also more common during **PM Rush Hour**:
 

@@ -273,9 +273,9 @@ For **Labor Day**, the top crimes were:
 * Narcotics
 * Assault
 
-📍 **Image location:** `The_top_5_crimes.png`
+📍 **Image location:** `Top_Holiday_Crimes.png`
 
-![Top Holiday Crimes](The_top_5_crimes.png)
+![Top Holiday Crimes](Top_Holiday_Crimes.png)
 
 ## 💡 Insight
 

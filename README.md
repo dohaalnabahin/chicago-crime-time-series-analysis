@@ -64,7 +64,7 @@ The workflow below summarizes the steps used in this project.
 
 📍 **Image location:** `images/workflow.png`
 
-![Project Workflow](Project Workflow.png)
+![Project Workflow](Project_Workflow.png)
 
 ---
 

@@ -518,13 +518,6 @@ chicago-crime-time-series-analysis/
 └── data/
     └── README.md
 ```
-
----
-
-## ✅ Project Status
-
-Completed as part of **Project 3: Chicago Crime Time Series Analysis and Forecasting**.
-
 ---
 
 ## ▶️ How to Run
@@ -547,4 +540,4 @@ Palestine 🇵🇸
 
 ## ✅ Project Status
 
-Completed as part of **Project 3 - Part 1: Time Series Analysis**.
+Completed as part of **Project 3: Chicago Crime Time Series Analysis and Forecasting**.

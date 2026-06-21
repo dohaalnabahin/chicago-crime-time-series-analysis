@@ -308,7 +308,7 @@ Each row in the new time series represents one month, and the value represents t
 
 📍 **Image location:** `images/Monthly_Theft_vs_Narcotics.png`
 
-![Monthly Theft vs Narcotics](images/Monthly_Theft_vs_Narcotics.png)
+![Monthly Theft vs Narcotics](Monthly_Theft_vs_Narcotics.png)
 
 ### Insight
 
@@ -326,11 +326,11 @@ For **Narcotics**, the seasonal component represented about **9.76%** of the tot
 
 📍 **Image location:** `images/Theft_Decomposition.png`
 
-![Theft Decomposition](images/Theft_Decomposition.png)
+![Theft Decomposition](Theft_Decomposition.png)
 
 📍 **Image location:** `images/Narcotics_Decomposition.png`
 
-![Narcotics Decomposition](images/Narcotics_Decomposition.png)
+![Narcotics Decomposition](Narcotics_Decomposition.png)
 
 ### Model Decision
 
@@ -389,11 +389,11 @@ The final manual SARIMA model was evaluated by comparing its forecast against th
 
 📍 **Image location:** `images/Theft_Forecast_vs_Test.png`
 
-![Theft Forecast vs Test](images/Theft_Forecast_vs_Test.png)
+![Theft Forecast vs Test](Theft_Forecast_vs_Test.png)
 
 📍 **Image location:** `images/Narcotics_Forecast_vs_Test.png`
 
-![Narcotics Forecast vs Test](images/Narcotics_Forecast_vs_Test.png)
+![Narcotics Forecast vs Test](Narcotics_Forecast_vs_Test.png)
 
 ### Insight
 
@@ -410,11 +410,11 @@ After selecting the final model, the manual SARIMA model was refit using the ful
 
 📍 **Image location:** `images/Theft_6_Month_Future_Forecast.png`
 
-![Theft Future Forecast](images/Theft_6_Month_Future_Forecast.png)
+![Theft Future Forecast](Theft_6_Month_Future_Forecast.png)
 
 📍 **Image location:** `images/Narcotics_6_Month_Future_Forecast.png`
 
-![Narcotics Future Forecast](images/Narcotics_6_Month_Future_Forecast.png)
+![Narcotics Future Forecast](Narcotics_6_Month_Future_Forecast.png)
 
 ---
 
@@ -427,11 +427,11 @@ After selecting the final model, the manual SARIMA model was refit using the ful
 
 📍 **Image location:** `images/Forecasted_Final_Month_Count.png`
 
-![Forecasted Final Month Count](images/Forecasted_Final_Month_Count.png)
+![Forecasted Final Month Count](Forecasted_Final_Month_Count.png)
 
 📍 **Image location:** `images/Forecasted_Percent_Change.png`
 
-![Forecasted Percent Change](images/Forecasted_Percent_Change.png)
+![Forecasted Percent Change](Forecasted_Percent_Change.png)
 
 ---
 

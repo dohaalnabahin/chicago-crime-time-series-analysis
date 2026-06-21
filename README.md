@@ -64,7 +64,7 @@ The workflow below summarizes the steps used in this project.
 
 📍 **Image location:** `Project_Workflow.png`
 
-![Project Workflow](Project_Workflow.png)
+![Project Workflow](project_workflow.png)
 
 ---
 
@@ -306,7 +306,7 @@ The original crime-level dataset was transformed into monthly crime counts using
 
 Each row in the new time series represents one month, and the value represents the number of reported crimes during that month.
 
-📍 **Image location:** `images/Monthly_Theft_vs_Narcotics.png`
+📍 **Image location:** `Monthly_Theft_vs_Narcotics.png`
 
 ![Monthly Theft vs Narcotics](Monthly_Theft_vs_Narcotics.png)
 
@@ -324,11 +324,11 @@ For **Theft**, the seasonal component represented about **32.08%** of the total 
 
 For **Narcotics**, the seasonal component represented about **9.76%** of the total variation, which is weaker than Theft but still shows some repeating yearly pattern.
 
-📍 **Image location:** `images/Theft_Decomposition.png`
+📍 **Image location:** `Theft_Decomposition.png`
 
 ![Theft Decomposition](Theft_Decomposition.png)
 
-📍 **Image location:** `images/Narcotics_Decomposition.png`
+📍 **Image location:** `Narcotics_Decomposition.png`
 
 ![Narcotics Decomposition](Narcotics_Decomposition.png)
 
@@ -387,11 +387,11 @@ The **manual SARIMA model** was selected as the final model for both Theft and N
 
 The final manual SARIMA model was evaluated by comparing its forecast against the actual test data.
 
-📍 **Image location:** `images/Theft_Forecast_vs_Test.png`
+📍 **Image location:** `Theft_Forecast_vs_Test.png`
 
 ![Theft Forecast vs Test](Theft_Forecast_vs_Test.png)
 
-📍 **Image location:** `images/Narcotics_Forecast_vs_Test.png`
+📍 **Image location:** `Narcotics_Forecast_vs_Test.png`
 
 ![Narcotics Forecast vs Test](Narcotics_Forecast_vs_Test.png)
 
@@ -408,11 +408,11 @@ After selecting the final model, the manual SARIMA model was refit using the ful
 
 **Forecast period:** January 2023 to June 2023
 
-📍 **Image location:** `images/Theft_6_Month_Future_Forecast.png`
+📍 **Image location:** `Theft_6_Month_Future_Forecast.png`
 
 ![Theft Future Forecast](Theft_6_Month_Future_Forecast.png)
 
-📍 **Image location:** `images/Narcotics_6_Month_Future_Forecast.png`
+📍 **Image location:** `Narcotics_6_Month_Future_Forecast.png`
 
 ![Narcotics Future Forecast](Narcotics_6_Month_Future_Forecast.png)
 
@@ -425,11 +425,11 @@ After selecting the final model, the manual SARIMA model was refit using the ful
 | Theft      | Jan 2023       | Jun 2023     |       4,120.41 |    4,771.85 |    +651.44 |        +15.81% |
 | Narcotics  | Jan 2023       | Jun 2023     |         406.55 |      266.02 |    -140.54 |        -34.57% |
 
-📍 **Image location:** `images/Forecasted_Final_Month_Count.png`
+📍 **Image location:** `Forecasted_Final_Month_Count.png`
 
 ![Forecasted Final Month Count](Forecasted_Final_Month_Count.png)
 
-📍 **Image location:** `images/Forecasted_Percent_Change.png`
+📍 **Image location:** `Forecasted_Percent_Change.png`
 
 ![Forecasted Percent Change](Forecasted_Percent_Change.png)
 

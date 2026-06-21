@@ -283,6 +283,180 @@ For **Labor Day**, the top crimes were:
 Theft was the most common crime on New Year's Day, while Battery was the most common crime on Independence Day and Labor Day.
 
 ---
+---
+
+# 🔮 Part 2: Crime Forecasting for Resource Allocation
+
+## 📌 Forecasting Objective
+
+In the second phase of this project, the goal was to help Chicago law enforcement allocate resources for the next **6 months** by forecasting future monthly crime counts.
+
+Two crime types were selected for forecasting:
+
+* 🧾 **Theft**
+* 💊 **Narcotics**
+
+The purpose of this phase is to compare the expected future trends for these two crimes and provide a recommendation for resource planning.
+
+---
+
+## 📈 Monthly Crime Count Time Series
+
+The original crime-level dataset was transformed into monthly crime counts using `.resample("MS").size()`.
+
+Each row in the new time series represents one month, and the value represents the number of reported crimes during that month.
+
+📍 **Image location:** `images/Monthly_Theft_vs_Narcotics.png`
+
+![Monthly Theft vs Narcotics](images/Monthly_Theft_vs_Narcotics.png)
+
+### Insight
+
+The monthly time series shows that **Theft consistently had higher monthly counts** than Narcotics. Theft also shows a clear seasonal pattern, while Narcotics shows a strong long-term decreasing trend.
+
+---
+
+## 🔍 Seasonality and Decomposition
+
+Seasonal decomposition was used to separate each time series into trend, seasonal, and residual components.
+
+For **Theft**, the seasonal component represented about **32.08%** of the total variation, indicating a meaningful yearly seasonal pattern.
+
+For **Narcotics**, the seasonal component represented about **9.76%** of the total variation, which is weaker than Theft but still shows some repeating yearly pattern.
+
+📍 **Image location:** `images/Theft_Decomposition.png`
+
+![Theft Decomposition](images/Theft_Decomposition.png)
+
+📍 **Image location:** `images/Narcotics_Decomposition.png`
+
+![Narcotics Decomposition](images/Narcotics_Decomposition.png)
+
+### Model Decision
+
+Since the data is monthly and both crime types showed seasonal behavior, a seasonal model was explored using a 12-month seasonal period:
+
+**m = 12**
+
+---
+
+## ⚙️ Model Development
+
+For both Theft and Narcotics, the following forecasting workflow was applied:
+
+1. Created monthly crime count time series.
+2. Checked for missing values.
+3. Performed seasonal decomposition.
+4. Determined differencing values:
+
+   * Theft: `d = 1`, `D = 0`
+   * Narcotics: `d = 1`, `D = 0`
+5. Used ACF and PACF plots to estimate initial orders.
+6. Split the data into training and testing sets.
+7. Used the last **6 months** as the test set.
+8. Fit a manual SARIMA model.
+9. Tuned using `auto_arima`.
+10. Compared the models using MAE, RMSE, and MAPE.
+11. Selected the final model.
+12. Generated true future forecasts for January 2023 to June 2023.
+
+The initial manual model used for both crime types was:
+
+**SARIMA(1,1,1)(1,0,1,12)**
+
+---
+
+## 🧪 Manual SARIMA vs Auto ARIMA
+
+The manual SARIMA model and auto_arima model were compared using evaluation metrics.
+
+| Crime Type | Selected Model |    MAE |   RMSE |   MAPE |
+| ---------- | -------------- | -----: | -----: | -----: |
+| Theft      | Manual SARIMA  | 200.67 | 241.69 |  3.92% |
+| Theft      | Auto ARIMA     | 211.59 | 269.82 |  4.27% |
+| Narcotics  | Manual SARIMA  |  51.58 |  60.59 | 14.82% |
+| Narcotics  | Auto ARIMA     |  89.64 | 104.44 | 25.67% |
+
+### Final Model Selection
+
+The **manual SARIMA model** was selected as the final model for both Theft and Narcotics because it produced lower MAE, RMSE, and MAPE compared to auto_arima.
+
+---
+
+## 📊 Forecast vs Test Data
+
+The final manual SARIMA model was evaluated by comparing its forecast against the actual test data.
+
+📍 **Image location:** `images/Theft_Forecast_vs_Test.png`
+
+![Theft Forecast vs Test](images/Theft_Forecast_vs_Test.png)
+
+📍 **Image location:** `images/Narcotics_Forecast_vs_Test.png`
+
+![Narcotics Forecast vs Test](images/Narcotics_Forecast_vs_Test.png)
+
+### Insight
+
+The Theft model performed very well with a low MAPE of **3.92%**.
+The Narcotics model had a higher MAPE of **14.82%**, mainly because Narcotics has much lower monthly counts, making percentage errors more sensitive.
+
+---
+
+## 🔮 6-Month Future Forecast
+
+After selecting the final model, the manual SARIMA model was refit using the full dataset and used to forecast the next 6 months beyond the dataset:
+
+**Forecast period:** January 2023 to June 2023
+
+📍 **Image location:** `images/Theft_6_Month_Future_Forecast.png`
+
+![Theft Future Forecast](images/Theft_6_Month_Future_Forecast.png)
+
+📍 **Image location:** `images/Narcotics_6_Month_Future_Forecast.png`
+
+![Narcotics Future Forecast](images/Narcotics_6_Month_Future_Forecast.png)
+
+---
+
+## 📌 Future Forecast Results
+
+| Crime Type | Forecast Start | Forecast End | Starting Value | Final Value | Net Change | Percent Change |
+| ---------- | -------------- | ------------ | -------------: | ----------: | ---------: | -------------: |
+| Theft      | Jan 2023       | Jun 2023     |       4,120.41 |    4,771.85 |    +651.44 |        +15.81% |
+| Narcotics  | Jan 2023       | Jun 2023     |         406.55 |      266.02 |    -140.54 |        -34.57% |
+
+📍 **Image location:** `images/Forecasted_Final_Month_Count.png`
+
+![Forecasted Final Month Count](images/Forecasted_Final_Month_Count.png)
+
+📍 **Image location:** `images/Forecasted_Percent_Change.png`
+
+![Forecasted Percent Change](images/Forecasted_Percent_Change.png)
+
+---
+
+## ✅ Forecasting Insights
+
+* **Theft** is forecasted to have the highest monthly count at the end of the forecast period.
+* **Theft** is forecasted to have the highest net increase, with about **651 additional crimes**.
+* **Theft** is expected to increase by **15.81%**.
+* **Narcotics** is expected to decrease by **34.57%**.
+* Although Narcotics has a larger percentage change in magnitude, it is decreasing, while Theft is increasing.
+
+---
+
+## 🧭 Final Recommendation
+
+Based on the 6-month future forecasts, law enforcement should prioritize additional resources toward **Theft-related prevention and response**.
+
+Theft is expected to increase from approximately **4,120 crimes in January 2023** to approximately **4,772 crimes in June 2023**, representing a predicted increase of **651 crimes**.
+
+In contrast, Narcotics is forecasted to decrease during the same period.
+
+Therefore, the main recommendation is to increase focus on Theft prevention, especially during the months leading into summer 2023. This may include increased patrols in high-theft areas, targeted public awareness campaigns, and closer monitoring of locations with historically high theft activity.
+
+---
+
 
 ## 🔑 Key Findings
 
@@ -292,6 +466,10 @@ Theft was the most common crime on New Year's Day, while Battery was the most co
 * 🧾 **Theft** was one of the most common crimes across multiple analyses.
 * 🎆 **New Year's Day** had the highest number of reported crimes among holidays.
 * ⚠️ Some crime types increased even though the overall crime trend decreased.
+* 🔮 In the forecasting phase, **Theft** was predicted to increase by **15.81%** over the next 6 months.
+* 💊 **Narcotics** was predicted to decrease by **34.57%** over the next 6 months.
+* 🧭 The final recommendation is to prioritize law enforcement resources toward **Theft prevention and response**.
+
 
 ---
 
@@ -303,6 +481,8 @@ Theft was the most common crime on New Year's Day, while Battery was the most co
 * Matplotlib
 * Seaborn
 * Holidays
+* Statsmodels
+* Pmdarima
 * Google Colab
 
 ---
@@ -324,11 +504,26 @@ chicago-crime-time-series-analysis/
 │   ├── The_top_5_crimes.png
 │   ├── Motor_Vehicle_Theft.png
 │   ├── Comparing_Holidays.png
-│   └── Top_Holiday_Crimes.png
+│   ├── Top_Holiday_Crimes.png
+│   ├── Monthly_Theft_vs_Narcotics.png
+│   ├── Theft_Decomposition.png
+│   ├── Narcotics_Decomposition.png
+│   ├── Theft_Forecast_vs_Test.png
+│   ├── Narcotics_Forecast_vs_Test.png
+│   ├── Theft_6_Month_Future_Forecast.png
+│   ├── Narcotics_6_Month_Future_Forecast.png
+│   ├── Forecasted_Final_Month_Count.png
+│   └── Forecasted_Percent_Change.png
 │
 └── data/
     └── README.md
 ```
+
+---
+
+## ✅ Project Status
+
+Completed as part of **Project 3: Chicago Crime Time Series Analysis and Forecasting**.
 
 ---
 

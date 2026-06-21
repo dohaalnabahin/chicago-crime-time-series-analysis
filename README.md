@@ -62,7 +62,7 @@ The data was provided as yearly CSV files and combined into one dataset for anal
 
 The workflow below summarizes the steps used in this project.
 
-📍 **Image location:** `Project_Workflow.png`
+📍 **Image location:** `project_workflow.png.png`
 
 ![Project Workflow](project_workflow.png)
 

@@ -1,3 +1,24 @@
+# Chicago Crime Analysis Project
+
+An interactive Tableau dashboard designed to analyze and visualize crime patterns, temporal trends, and geographical distributions in Chicago during 2001.
+
+## Key Features
+* **Crime by Day of Week:** Visualizes the distribution of crimes across different days.
+* **Top Crime Types:** Identifies the top 10 most prevalent crimes with responsive interactive action filters.
+* **Crime Locations:** Map visualization highlighting high-density crime hot-spots.
+* **KPI Cards & Navigation:** Executive summary layout with clear call-to-actions.
+
+## Dashboard Preview
+![Main Dashboard](dashboard.png)
+
+## Interactive View
+You can interact with the live version of this dashboard here:
+[View Live Tableau Dashboard](https://public.tableau.com/app/profile/doha.al.nabahin/viz/project_17842089936580/MainDashboard?publish=yes)
+
+## Author
+* **Daha AL_Naba...**
+
+
 # 🚔 Chicago Crime Time Series Analysis
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge\&logo=python)
